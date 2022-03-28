@@ -34,7 +34,7 @@ function App() {
   useEffect(() => {
     const getPins = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/pins")
+        const res = await axios.get("https://travelpinappmern.herokuapp.com/api/pins")
         setPins(res.data)
       } catch (error) {
         console.log(error)
@@ -74,7 +74,7 @@ function App() {
     }
     try {
       //send data to db
-      const res = await axios.post("http://localhost:3001/api/pins", newPin)
+      const res = await axios.post("https://travelpinappmern.herokuapp.com/api/pins", newPin)
       setPins([...pins, res.data])
       //after sending to db want to close form 
       setNewPlace(null);
