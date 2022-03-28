@@ -20,7 +20,7 @@ const Login = ({ setShowLogin, myStorage, setCurrentUser }) => {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/users/login",
+        "https://travelpinappmern.herokuapp.com/api/users/login",
         user
       );
       myStorage.setItem("user", res.data.username);

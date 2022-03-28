@@ -20,7 +20,10 @@ const Register = ({ setShowRegister }) => {
     };
 
     try {
-      await axios.post("http://localhost:5000/api/users/register", newUser);
+      await axios.post(
+        "https://travelpinappmern.herokuapp.com/api/users/register",
+        newUser
+      );
       setSuccess(true);
       setError(false);
     } catch (error) {

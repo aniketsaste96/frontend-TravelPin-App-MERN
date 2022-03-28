@@ -104,7 +104,7 @@ function App() {
         transitionDuration="200"
 
       >
-        {pins.map(pin => (
+        {pins?.map(pin => (
 
           <>
             <Marker longitude={pin.long} latitude={pin.lat
